@@ -2,7 +2,7 @@ package alfred
 
 import (
 	"fmt"
-	aw "github.com/deanishe/awgo"
+	"github.com/deanishe/awgo"
 )
 
 const (
@@ -18,6 +18,6 @@ func GetDocbaseSecret(wf *aw.Workflow) (string, error) {
 	return token, nil
 }
 
-func SetDocbaseSecret(wf *aw.Workflow, secret string) error {
+func SetDocBaseSecret(wf *aw.Workflow, secret string) error {
 	return wf.Keychain.Set(docbaseSecret, secret)
 }

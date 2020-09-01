@@ -3,13 +3,13 @@ package alfred
 import aw "github.com/deanishe/awgo"
 
 const (
-	docbaseTeam = "docbase_team"
+	DocBaseTeam = "docbase_team"
 )
 
-func GetDocbaseTeam(wf *aw.Workflow) string {
-	return wf.Config.Get(docbaseTeam)
+func GetDocBaseTeam(wf *aw.Workflow) string {
+	return wf.Config.Get(DocBaseTeam)
 }
 
-func SetDocbaseTeam(wf *aw.Workflow, id string) error {
-	return wf.Config.Set(docbaseTeam, id, false).Do()
+func SetDocBaseTeam(wf *aw.Workflow, id string) error {
+	return wf.Config.Set(DocBaseTeam, id, false).Do()
 }

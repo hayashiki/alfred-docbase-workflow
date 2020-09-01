@@ -5,6 +5,10 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/deanishe/awgo v0.27.1 h1:Vf8v7yaGWN3fibT+db1Mfw95Q/rD/1Qbf4ahGa4tMSY=
 github.com/deanishe/awgo v0.27.1/go.mod h1:Qen3509y1/sj7a5syefWc6FQHO1LE/tyoTyN9jRv1vU=
+github.com/hayashiki/docbase-go v0.1.0 h1:Q0SelMCHpeZAuz9xiHN06XKUEcyOSXF1shA5XWSIVwo=
+github.com/hayashiki/docbase-go v0.1.0/go.mod h1:mgawCWJt6wtJdOqd+446HOMsmZlLEmst/rvpE1oX5Hk=
+github.com/hayashiki/docbase-go v0.1.1 h1:2goSjcP032WtQriTD7NBSJbMRVr5w0Q1iMojpEJVXHM=
+github.com/hayashiki/docbase-go v0.1.1/go.mod h1:mgawCWJt6wtJdOqd+446HOMsmZlLEmst/rvpE1oX5Hk=
 github.com/jessevdk/go-flags v1.4.0/go.mod h1:4FA24M0QyGHXBuZZK/XkWh8h0e1EYbRYJSGM75WSRxI=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=

@@ -1,3 +1,3 @@
 # alfred-docbase-workflow
 
-Alfred workflow to view the docbase resources.
+Alfred workflow to view the DocBase resources.
