@@ -20,8 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Add $GOPATH/bin to $PATH
+        run: echo "::add-path::$(go env GOPATH)/bin"
+
       - name: Make package
-        run: make build
+        run: |
+          make build
 
       - name: Release
         uses: softprops/action-gh-release@v1
