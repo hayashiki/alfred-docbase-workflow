@@ -25,7 +25,6 @@ jobs:
 
       - name: Make package
         run: |
-          go get -u github.com/x-motemen/gobump/cmd/gobump
           make build
 
       - name: Release
