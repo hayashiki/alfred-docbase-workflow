@@ -634,7 +634,7 @@
 	<key>variables</key>
 	<dict>
 		<key>docbase_team</key>
-		<string>bulb</string>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
