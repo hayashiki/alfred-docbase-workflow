@@ -16,8 +16,10 @@ $(GOBIN)/gobump:
 build:
 	GOARCH=amd64 GOOS=darwin go build -ldflags "-s -w" -o "./.workflow/dc"; \
 	VERSION=v$(VERSION) envsubst >./.workflow/info.plist <./.workflow/info.plist.template;
-	zip -r "./bin/$(ARCHIVE)" ./.workflow/*;
-	zip -d "./bin/$(ARCHIVE)" ./.workflow/info.plist.template;
+	cd .workflow; \
+	zip -r "./DocBase.zip" ./*; \
+	zip -d "./DocBase.zip" ./info.plist.template;
+	mv ".workflow/DocBase.zip" "./bin/$(ARCHIVE)"
 
 .PHONY: tag
 tag:
