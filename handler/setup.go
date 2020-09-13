@@ -11,6 +11,7 @@ import (
 const (
 	argsSeparator = " "
 )
+
 // DoSetup is setup alfred setting
 // first arg is Client team
 // second arg is Client secret token

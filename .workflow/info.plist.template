@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>DocBase Alfred Tool</string>
-	<key>category</key>
-	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>02E1B3C1-C91C-4D8E-92B7-AD6CEB7FBA96</key>
@@ -39,6 +37,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3B8F52FD-DF7B-4F30-AB6A-66F4BD0906E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>544F04EF-ED41-4197-8DB3-3226423802DF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>96118058-C55F-4E06-A51C-B4D4B2387289</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -87,11 +98,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>6E11DB73-6EDC-47D4-9927-8BB3A716C666</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>96118058-C55F-4E06-A51C-B4D4B2387289</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7053D4AB-BCEC-400F-858A-8478E1A8CF03</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>748374D3-51E4-4582-9251-A1C8B77BB762</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>96118058-C55F-4E06-A51C-B4D4B2387289</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>164A5DE5-4064-4352-B2B1-57726BB31344</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -156,7 +193,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>setup</string>
+				<string>docbase setup</string>
 				<key>subtext</key>
 				<string>&lt;team&gt; &lt;access_token&gt;</string>
 				<key>text</key>
@@ -168,6 +205,27 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>6C163918-1215-4E68-A114-EEEB89A18B04</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>cleanup</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Remove team and access token from Alfred</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>544F04EF-ED41-4197-8DB3-3226423802DF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -218,6 +276,50 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./dc cleanup "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>96118058-C55F-4E06-A51C-B4D4B2387289</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>DocBase Setup</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>164A5DE5-4064-4352-B2B1-57726BB31344</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
@@ -239,6 +341,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>dc cleanup</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Remove team and access token from Alfred</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6E11DB73-6EDC-47D4-9927-8BB3A716C666</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -252,7 +375,7 @@
 				<key>escaping</key>
 				<integer>126</integer>
 				<key>keyword</key>
-				<string>list</string>
+				<string>docbase list</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -391,7 +514,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>update</string>
+				<string>docbase update</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -544,28 +667,42 @@
 			<key>xpos</key>
 			<integer>45</integer>
 			<key>ypos</key>
-			<integer>680</integer>
+			<integer>645</integer>
+		</dict>
+		<key>164A5DE5-4064-4352-B2B1-57726BB31344</key>
+		<dict>
+			<key>xpos</key>
+			<integer>840</integer>
+			<key>ypos</key>
+			<integer>75</integer>
 		</dict>
 		<key>3B8F52FD-DF7B-4F30-AB6A-66F4BD0906E3</key>
 		<dict>
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>650</integer>
+			<integer>615</integer>
 		</dict>
 		<key>409D2049-3C73-4416-88EC-F1A911CC0652</key>
 		<dict>
 			<key>xpos</key>
 			<integer>45</integer>
 			<key>ypos</key>
-			<integer>560</integer>
+			<integer>525</integer>
+		</dict>
+		<key>544F04EF-ED41-4197-8DB3-3226423802DF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>20</integer>
 		</dict>
 		<key>5F14DF55-44F9-4BA8-BCA3-BE54D8A67AC5</key>
 		<dict>
 			<key>xpos</key>
 			<integer>260</integer>
 			<key>ypos</key>
-			<integer>640</integer>
+			<integer>605</integer>
 		</dict>
 		<key>6C163918-1215-4E68-A114-EEEB89A18B04</key>
 		<dict>
@@ -573,6 +710,13 @@
 			<integer>45</integer>
 			<key>ypos</key>
 			<integer>15</integer>
+		</dict>
+		<key>6E11DB73-6EDC-47D4-9927-8BB3A716C666</key>
+		<dict>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>140</integer>
 		</dict>
 		<key>7053D4AB-BCEC-400F-858A-8478E1A8CF03</key>
 		<dict>
@@ -593,14 +737,21 @@
 			<key>xpos</key>
 			<integer>275</integer>
 			<key>ypos</key>
-			<integer>375</integer>
+			<integer>340</integer>
+		</dict>
+		<key>96118058-C55F-4E06-A51C-B4D4B2387289</key>
+		<dict>
+			<key>xpos</key>
+			<integer>685</integer>
+			<key>ypos</key>
+			<integer>75</integer>
 		</dict>
 		<key>A3A3D0B4-3880-4F5B-82A0-BADE1B4C6ADD</key>
 		<dict>
 			<key>xpos</key>
 			<integer>45</integer>
 			<key>ypos</key>
-			<integer>305</integer>
+			<integer>270</integer>
 		</dict>
 		<key>A3AA668F-5236-4949-952B-2AD69E299955</key>
 		<dict>
@@ -614,21 +765,21 @@
 			<key>xpos</key>
 			<integer>45</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>390</integer>
 		</dict>
 		<key>CC5E5E05-EBC9-4081-AA61-3D478E106FBD</key>
 		<dict>
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>555</integer>
+			<integer>520</integer>
 		</dict>
 		<key>DDDD3F20-9E4C-425A-A06D-51472CF889AE</key>
 		<dict>
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>675</integer>
+			<integer>640</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
