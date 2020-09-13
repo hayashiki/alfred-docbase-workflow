@@ -28,8 +28,11 @@ func run(wf *aw.Workflow) {
 	log.Printf("args is %+v", args)
 
 	handlers := map[string]func(*aw.Workflow, []string) (string, error){
-		"setup":  handler.DoSetup,
-		"search": handler.DoSearch,
+		"setup":   handler.DoSetup,
+		"cleanup": handler.DoCleanup,
+		"update":  handler.DoUpdate,
+		"install": handler.DoInstall,
+		"search":  handler.DoSearch,
 	}
 
 	h, found := handlers[args[0]]

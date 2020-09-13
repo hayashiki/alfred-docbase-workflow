@@ -29,7 +29,7 @@ func (c *DocBase) List(query string) ([]docbase.Post, error) {
 // NewClient return a instance of DocBase client.
 func NewClient(ctx context.Context, wf *aw.Workflow) (*DocBase, error) {
 	team := alfred.GetDocBaseTeam(wf)
-	token, err := alfred.GetDocbaseSecret(wf)
+	token, err := alfred.GetDocBaseSecret(wf)
 	if err != nil {
 		return nil, err
 	}
