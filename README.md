@@ -17,5 +17,5 @@ Search your memo on DocBase using Alfred.
 | -------------- | ------------------------------------------------------------------- |
 | dc setup       | Authorize Alfred to access your DocBase Team.                       |
 | dc list        | List memo .                                                         |
-| tt update      | Check if there are updates available.                               |
+| dc update      | Check if there are updates available.                               |
 | dc cleanup     | Cancel an ongoing task.                                             |
