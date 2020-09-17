@@ -216,9 +216,9 @@
 				<key>keyword</key>
 				<string>cleanup</string>
 				<key>subtext</key>
-				<string></string>
-				<key>text</key>
 				<string>Remove team and access token from Alfred</string>
+				<key>text</key>
+				<string>DocBase Cleanup</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -346,9 +346,9 @@
 				<key>keyword</key>
 				<string>dc cleanup</string>
 				<key>subtext</key>
-				<string></string>
-				<key>text</key>
 				<string>Remove team and access token from Alfred</string>
+				<key>text</key>
+				<string>DocBase Cleanup</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -395,7 +395,7 @@
 				<key>subtext</key>
 				<string>List the docbase posts</string>
 				<key>title</key>
-				<string>Docbase List</string>
+				<string>DocBase List</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -464,7 +464,7 @@
 				<key>subtext</key>
 				<string>Search posts for "{query}"</string>
 				<key>title</key>
-				<string>Docbase List</string>
+				<string>DocBase List</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -797,3 +797,4 @@
 	<string>https://github.com/hayashiki/alfred-docbase-workflow</string>
 </dict>
 </plist>
+
