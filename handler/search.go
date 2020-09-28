@@ -5,6 +5,7 @@ import (
 	"fmt"
 	aw "github.com/deanishe/awgo"
 	"github.com/hayashiki/alfred-docbase-workflow/docbase"
+	"log"
 	"strconv"
 )
 
@@ -14,9 +15,13 @@ func DoSearch(wf *aw.Workflow, args []string) (string, error) {
 		return "", fmt.Errorf("please provide some input 👀")
 	}
 
+	for _, arg := range args {
+		log.Printf("DoSearch args is %s", arg)
+	}
+
 	ctx := context.Background()
-	docbaseService, err := docbase.NewClient(ctx, wf)
-	items, err := docbaseService.List(args[0])
+	docBaseService, err := docbase.NewClient(ctx, wf)
+	items, err := docBaseService.List(args[0])
 
 	if err != nil {
 		return "", fmt.Errorf("fail to get docbase posts 👀")

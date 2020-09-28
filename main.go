@@ -25,7 +25,9 @@ func run(wf *aw.Workflow) {
 		exitWithError("please provide some input 👀")
 	}
 
-	log.Printf("args is %+v", args)
+	for _, arg := range args {
+		log.Printf("args is %s", arg)
+	}
 
 	handlers := map[string]func(*aw.Workflow, []string) (string, error){
 		"setup":   handler.DoSetup,
