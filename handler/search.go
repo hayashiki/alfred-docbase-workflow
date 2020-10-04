@@ -8,21 +8,20 @@ import (
 	"strconv"
 )
 
-func DoSearch(wf *aw.Workflow, args []string) (string, error) {
-
-	if len(args) != 1 {
-		return "", fmt.Errorf("please provide some input 👀")
+// DoSearch is search DocBase posts by keyword
+func DoSearch(wf *aw.Workflow, arg string) (string, error) {
+	if arg == "" {
+		return "", fmt.Errorf("please provide team or token input 😂")
 	}
 
 	ctx := context.Background()
-	docbaseService, err := docbase.NewClient(ctx, wf)
-	items, err := docbaseService.List(args[0])
+	docBaseService, err := docbase.NewClient(ctx, wf)
+	items, err := docBaseService.List(arg)
 
 	if err != nil {
-		return "", fmt.Errorf("fail to get docbase posts 👀")
+		return "", fmt.Errorf("fail to get docbase posts 😂")
 	}
 
-	icon := &aw.Icon{Value: "./icon/icon01.png"}
 	for _, item := range items {
 		wf.
 			NewItem(item.Title).
@@ -30,7 +29,7 @@ func DoSearch(wf *aw.Workflow, args []string) (string, error) {
 			Subtitle(item.User.Name).
 			Arg(item.URL).
 			Valid(true).
-			Icon(icon)
+			Icon(&aw.Icon{Value: "./icon/icon01.png"})
 	}
 
 	wf.WarnEmpty("No Posts were found.", "Try different query.")

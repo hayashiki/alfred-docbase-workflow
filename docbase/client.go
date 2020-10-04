@@ -5,6 +5,12 @@ import (
 	aw "github.com/deanishe/awgo"
 	"github.com/hayashiki/alfred-docbase-workflow/alfred"
 	"github.com/hayashiki/docbase-go"
+	"net/http"
+)
+
+const (
+	offset = 1
+	limit = 20
 )
 
 // DocBase describe an instance of API client.
@@ -12,17 +18,25 @@ type DocBase struct {
 	Client *docbase.Client
 }
 
-func (c *DocBase) List(query string) ([]docbase.Post, error) {
-	// TODO: Flexible Query
+func (c *DocBase) List(query string) ([]*docbase.Post, error) {
+
 	opts := &docbase.PostListOptions{
-		Q:       "desc%3Ascore%20" + query,
-		Page:    1,
-		PerPage: 20,
+		Q:       query,
+		Page:    offset,
+		PerPage: limit,
 	}
 
-	posts, _, err := c.Client.Posts.List(opts)
+	posts, resp, err := c.Client.Posts.List(opts)
 
-	return posts.Posts, err
+	if err != nil {
+		return nil, err
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, err
+	}
+
+	return posts, err
 
 }
 

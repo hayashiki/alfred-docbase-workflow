@@ -4,5 +4,5 @@ go 1.13
 
 require (
 	github.com/deanishe/awgo v0.27.1
-	github.com/hayashiki/docbase-go v0.1.1
+	github.com/hayashiki/docbase-go v1.0.2
 )

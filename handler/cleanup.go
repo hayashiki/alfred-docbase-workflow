@@ -7,7 +7,7 @@ import (
 	aw "github.com/deanishe/awgo"
 )
 
-func DoCleanup(wf *aw.Workflow, _ []string) (string, error) {
+func DoCleanup(wf *aw.Workflow, _ string) (string, error) {
 	if _, err := alfred.GetDocBaseSecret(wf); err != nil {
 		return "", fmt.Errorf("already cleanuped 🤣 (%w)", err)
 	}
