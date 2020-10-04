@@ -16,6 +16,6 @@ Search your memo on DocBase using Alfred.
 | Command        | Explanation                                                         |
 | -------------- | ------------------------------------------------------------------- |
 | dc setup       | Authorize Alfred to access your DocBase Team.                       |
-| dc list        | List memo .                                                         |
+| dc list        | Search DocBase posts by keyword.                                    |
 | dc update      | Check if there are updates available.                               |
-| dc cleanup     | Cancel an ongoing task.                                             |
+| dc cleanup     | Cleanup team and token info.                                        |
