@@ -3,12 +3,9 @@ package handler
 import (
 	"fmt"
 	"github.com/deanishe/awgo"
-	"log"
 )
 
-func DoUpdate(wf *aw.Workflow, _ []string) (string, error) {
-	log.Println("Checking for updates...")
-
+func DoUpdate(wf *aw.Workflow, _ string) (string, error) {
 	if err := wf.CheckForUpdate(); err != nil {
 		return "", fmt.Errorf("err: %w", err)
 	}

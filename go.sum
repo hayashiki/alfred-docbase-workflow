@@ -11,6 +11,8 @@ github.com/hayashiki/docbase-go v0.1.1 h1:2goSjcP032WtQriTD7NBSJbMRVr5w0Q1iMojpE
 github.com/hayashiki/docbase-go v0.1.1/go.mod h1:mgawCWJt6wtJdOqd+446HOMsmZlLEmst/rvpE1oX5Hk=
 github.com/hayashiki/docbase-go v1.0.1 h1:pHysXyA41gBwYj1cxS2D4Naxtb2IHrupSlAfcLtaOos=
 github.com/hayashiki/docbase-go v1.0.1/go.mod h1:mgawCWJt6wtJdOqd+446HOMsmZlLEmst/rvpE1oX5Hk=
+github.com/hayashiki/docbase-go v1.0.2 h1:KiIo+8JnlQ5XUzEA4geHL58mpKe9lh8VjYyafAX3pCA=
+github.com/hayashiki/docbase-go v1.0.2/go.mod h1:mgawCWJt6wtJdOqd+446HOMsmZlLEmst/rvpE1oX5Hk=
 github.com/jessevdk/go-flags v1.4.0/go.mod h1:4FA24M0QyGHXBuZZK/XkWh8h0e1EYbRYJSGM75WSRxI=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=

@@ -25,11 +25,7 @@ func run(wf *aw.Workflow) {
 		exitWithError("please provide some input 👀")
 	}
 
-	for _, arg := range args {
-		log.Printf("args is %s", arg)
-	}
-
-	handlers := map[string]func(*aw.Workflow, []string) (string, error){
+	handlers := map[string]func(*aw.Workflow, string) (string, error){
 		"setup":   handler.DoSetup,
 		"cleanup": handler.DoCleanup,
 		"update":  handler.DoUpdate,
@@ -37,13 +33,15 @@ func run(wf *aw.Workflow) {
 		"search":  handler.DoSearch,
 	}
 
-	h, found := handlers[args[0]]
+	cmd, arg := parseArgs(args)
+
+	h, found := handlers[cmd]
 
 	if !found {
-		exitWithError(args[0])
+		exitWithError(cmd)
 	}
 
-	msg, err := h(wf, args[1:])
+	msg, err := h(wf, arg)
 	if err != nil {
 		exitWithError(err.Error())
 		os.Exit(1)
@@ -62,4 +60,16 @@ func exitWithError(msg string) {
 
 func capitalize(msg string) string {
 	return string(unicode.ToUpper(rune(msg[0]))) + msg[1:]
+}
+
+func parseArgs(args []string) (cmd, arg string) {
+	if len(args) == 1 {
+		return args[0], ""
+	}
+
+	if len(args) == 2 {
+		return args[0], args[1]
+	}
+
+	return "", ""
 }

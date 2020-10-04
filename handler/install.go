@@ -5,7 +5,7 @@ import (
 	"github.com/deanishe/awgo"
 )
 
-func DoInstall(wf *aw.Workflow, _ []string) (string, error) {
+func DoInstall(wf *aw.Workflow, _ string) (string, error) {
 	fmt.Print("Downloading install...")
 
 	if err := wf.InstallUpdate(); err != nil {
